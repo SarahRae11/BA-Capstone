@@ -1,0 +1,33 @@
+[paths]
+mmesh = 'C:\Users\35383\Downloads\Month of SWEAP data 2019; 06,03 - 06,04\MMESH.zip'
+output = 'C:\Users\35383\Downloads\minimal example output'
+
+[domain]
+helioradial = [0.2, 0.6]            # [min, max] distance from Sun, AU
+heliolatitudinal = [-6.1, 6.1]      # [min, max] angle from solar equator, deg.
+
+[cast_intervals]
+    
+    [cast_intervals.mercury_simulcast]   # Internal name of this interval
+    target = '200521-200601data.zip'     # Target to cast at    (???)
+    start  = 2020-05-19 06:59:59.998000  # First date/time to use, inclusive
+    stop   = 2020-05-26 06:59:59.998000 # Last date/time to use, exclusive
+
+[models]
+
+    [models.tao]                        # Internal name of this model
+    source = '200521-200601model.zip'   # Source of this model for input
+    color = '#b94973'                   # Default color for this model in plots
+    marker = 'v'                        # Default marker for this model in plots
+    
+[trajectories]
+
+    [trajectories.PSP]
+    source = '200521-200601data.zip'    # 190909 - 190917 has Nan values for density and velocity
+    start = 2020-05-23 02:59:59.998000
+    stop = 2020-05-30 06:59:59.998000
+
+
+
+
+
